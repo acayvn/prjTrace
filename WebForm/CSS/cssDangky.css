@@ -1,0 +1,35 @@
+﻿.table {
+    width: 50%;
+}
+
+    .table tr {
+        width: 100%;
+    }
+
+        .table tr td {
+        }
+
+    .table span {
+        color: red;
+    }
+
+.fildText {
+    float: right;
+}
+
+.tit {
+    background: blue none repeat scroll 0 0;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+.table .btn {
+    text-align: center;
+}
+
+.err {
+    color: red;
+    position: absolute;
+}

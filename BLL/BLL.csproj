@@ -50,8 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Class User\ClassUser_BLL.cs" />
+    <Compile Include="GetChildsById.cs" />
     <Compile Include="ModuleOne\ChucNang\BLL_DangNhap.cs" />
+    <Compile Include="ModuleOne\Hotgate\DangKyUser_BLL.cs" />
     <Compile Include="ModuleOne\Hotgate\Hotgate_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

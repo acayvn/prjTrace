@@ -23,7 +23,7 @@ namespace WebForm
         {
             DataTable dt = BLL.ModuleOne.Hotgate.Hotgate_BLL.LoadModules();
             viewHotgate.DataSource = dt;
-            viewHotgate.DataBind();
+            viewHotgate.DataBind();                        
         }
     }
 }

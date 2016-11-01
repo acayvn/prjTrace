@@ -62,9 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAO.cs" />
+    <Compile Include="Class User\ClassUser_DAO.cs" />
     <Compile Include="ModuleOne\ChucNang\DangNhap_DAO.cs" />
+    <Compile Include="ModuleOne\Hotgate\DangKyUser_DAO.cs" />
     <Compile Include="ModuleOne\Hotgate\Hotgate_DAO.cs" />
-    <Compile Include="objGetData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="I\" />
+    <Folder Include="Provider\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

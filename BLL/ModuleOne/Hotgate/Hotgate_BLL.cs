@@ -12,5 +12,14 @@ namespace BLL.ModuleOne.Hotgate
         {
             return new DAO.ModuleOne.Hotgate_DAO().LoadModules();
         }
+        public static int CheckDangKyUser(string userName)
+        {
+            return DAO.ModuleOne.Hotgate_DAO.CheckDangKyUser(userName);
+        }
+        public static int CheckDangKyEmail(string email)
+        {
+            return DAO.ModuleOne.Hotgate_DAO.CheckDangKyEmail(email);
+        }
+
     }
 }

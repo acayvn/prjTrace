@@ -9,16 +9,61 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
+    <link href="CSS/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="CSS/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="CSS/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="CSS/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="CSS/vendor/jquery/jquery.min.js"></script>
+    <script src="CSS/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="CSS/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="CSS/dist/js/sb-admin-2.js"></script>
+
+
+    <style>
+        .infoUser {
+            float: right;
+            position: relative;
+        }
+
+        .divMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .menu {
+            top: 0px;
+            position: relative;
+        }
+    </style>
+    <link href="CSS/cssMenu.css" rel="stylesheet" />
     <form id="form1" runat="server">
-    <div>
-        <div>
-        <asp:Menu runat="server" ID="mnuHotgate"></asp:Menu>
+        <div class="divMenu">
+            <div class="menu">
+                <asp:Menu runat="server" MaximumDynamicDisplayLevels="1" CssClass="fixNav" Orientation="Horizontal" ID="mnuHotgate"></asp:Menu>
+
+
+
+            </div>
+            
+            <div class="nav">
+                <%= menuText.ToString() %>
+            </div>
+            <asp:Label runat="server" CssClass="infoUser" ID="lblWellcome">
+            
+            </asp:Label>
+            <asp:LinkButton ID="btnLogout" CssClass="infoUser" Font-Italic="true" runat="server" Text="Đăng xuất" OnClick="btnLogout_Click">
+            </asp:LinkButton>
 
         </div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
