@@ -161,6 +161,7 @@
     <Content Include="DoiThongTinCaNhan.aspx" />
     <Content Include="Hotgate.aspx" />
     <Content Include="Images\nurse-icon.png" />
+    <Content Include="QuenMatKhau.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +209,13 @@
       <DependentUpon>MasterPageHotgate.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenMatKhau.aspx.cs">
+      <DependentUpon>QuenMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhau.aspx.designer.cs">
+      <DependentUpon>QuenMatKhau.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPhongKham.master.cs" Inherits="QLPhongKham.MasterPhongKham" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/masterCss.css" rel="stylesheet" />
+</head>
+<body>
+    
+
+    <form id="form1" runat="server">
+        <div class="divMaster">
+            <div class="divMenu">
+                <div class="nav"> 
+                    <%= menuText.ToString() %>
+                </div>
+            </div>
+            <div class="divInfo">
+                <span id="lblInfo" runat="server"></span>
+                <asp:LinkButton ID="btnDangXuat" runat="server" ForeColor="Blue" Text="Đăng xuất" OnClick="btnDangXuat_Click"></asp:LinkButton>
+            </div>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

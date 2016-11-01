@@ -36,6 +36,12 @@
                                     OnClick="btnDangNhap_Click" />
                                 <asp:Label ID="lblThongBao" ForeColor="Red" runat="server" Visible="false"></asp:Label>
                             </div>
+                            <div class="form-group">
+                                <div>
+                                <a href="DangKyTaiKhoan.aspx" style="font-style: italic; margin: 10px;" >Đăng ký tài khoản</a>
+                                <a href="QuenMatKhau.aspx" style="font-style: italic">Quên mật khẩu</a>
+                                    </div>
+                            </div>
                         </fieldset>
 
                     </div>

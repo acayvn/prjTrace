@@ -53,15 +53,30 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\cssDangky.css" />
-    <Content Include="CSS\cssMenu.css" />
+    <Content Include="CSS\masterCss.css" />
+    <Content Include="Home\Home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassInQLPK\ClassUser.cs" />
+    <Compile Include="Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPhongKham.Master.cs">
+      <DependentUpon>MasterPhongKham.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPhongKham.Master.designer.cs">
+      <DependentUpon>MasterPhongKham.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterPhongKham.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,7 +95,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Home\" />
     <Folder Include="PhongKhamInfo\" />
   </ItemGroup>
   <PropertyGroup>
