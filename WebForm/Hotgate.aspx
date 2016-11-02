@@ -28,8 +28,8 @@
     <asp:DataList Width="100%" ID="viewHotgate" runat="server" RepeatColumns="2" RepeatDirection="Horizontal">
         <ItemTemplate>
             <div class="divClass">
-                <asp:ImageButton ID="btnImage" runat="server" CommandArgument='<%# Eval("IdTree") %>' CommandName="ClickImage" ImageUrl='<%# Eval("Link") %>' />
-                <asp:LinkButton ID="btnLink" runat="server" CommandArgument='<%# Eval("IdTree") %>' CommandName="Click" Text='<%# Eval("NameTree") %>'></asp:LinkButton>
+                <asp:ImageButton ID="btnImage" runat="server" CommandArgument='<%# Eval("IdTree") %>' CommandName="ClickImage" OnClick="btnImage_Click" ImageUrl='<%# Eval("PathImage") %>' />
+                <asp:LinkButton ID="btnLink" runat="server" CommandArgument='<%# Eval("IdTree") %>' CommandName="Click" OnClick="btnLink_Click" Text='<%# Eval("NameTree") %>'></asp:LinkButton>
             </div>
         </ItemTemplate>
     </asp:DataList>

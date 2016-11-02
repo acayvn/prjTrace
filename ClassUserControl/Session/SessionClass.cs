@@ -12,6 +12,7 @@ namespace ClassUserControl
         private int _IdMenu;
         private int _IdCore;
         private int _IdUser;
+        private string _Url;
         public int IdCore
         {
             get
@@ -63,6 +64,19 @@ namespace ClassUserControl
                 _IdUser = value;
             }
         }
+
+        public string Url
+        {
+            get
+            {
+                return _Url;
+            }
+
+            set
+            {
+                _Url = value;
+            }
+        }
         #endregion
         #region contruction
         public SessionClass(int idTree)
@@ -79,6 +93,13 @@ namespace ClassUserControl
             _IdMenu = idMenu;
             _IdTree = idTree;
             _IdCore = idCore;
+        }
+        public SessionClass(int idTree, int idMenu, int idCore, string url)
+        {
+            _IdMenu = idMenu;
+            _IdTree = idTree;
+            _IdCore = idCore;
+            _Url = url;
         }
         public void Dispose()
         {

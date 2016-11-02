@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
 using System.Data;
+using ClassUserControl;
 
 
 namespace WebForm
@@ -24,6 +25,20 @@ namespace WebForm
             DataTable dt = BLL.ModuleOne.Hotgate.Hotgate_BLL.LoadModules();
             viewHotgate.DataSource = dt;
             viewHotgate.DataBind();                        
+        }
+
+        protected void btnImage_Click(object sender, ImageClickEventArgs e)
+        {
+            int idTree = Convert.ToInt32((sender as ImageButton).CommandArgument);
+            SessionClass clsSession = (SessionClass)Session["SessionClass"];
+            clsSession.IdTree = idTree;
+            Session["SessionClass"] = clsSession;
+            Response.Redirect((sender as ImageButton).);
+        }
+
+        protected void btnLink_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
