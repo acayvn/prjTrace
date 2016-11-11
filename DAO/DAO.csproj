@@ -66,6 +66,7 @@
     <Compile Include="ModuleOne\ChucNang\DangNhap_DAO.cs" />
     <Compile Include="ModuleOne\Hotgate\DangKyUser_DAO.cs" />
     <Compile Include="ModuleOne\Hotgate\Hotgate_DAO.cs" />
+    <Compile Include="ModulePhongKham\Admin\SoDoToChuc_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

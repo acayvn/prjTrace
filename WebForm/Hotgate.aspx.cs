@@ -20,6 +20,10 @@ namespace WebForm
                 LoadModules();
             }
         }
+        void VerityToken()
+        {
+
+        }
         void LoadModules()
         {
             DataTable dt = BLL.ModuleOne.Hotgate.Hotgate_BLL.LoadModules();
@@ -33,7 +37,7 @@ namespace WebForm
             SessionClass clsSession = (SessionClass)Session["SessionClass"];
             clsSession.IdTree = idTree;
             Session["SessionClass"] = clsSession;
-            Response.Redirect((sender as ImageButton).);
+            //Response.Redirect((sender as ImageButton).);
         }
 
         protected void btnLink_Click(object sender, EventArgs e)

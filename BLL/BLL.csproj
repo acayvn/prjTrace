@@ -55,6 +55,7 @@
     <Compile Include="ModuleOne\ChucNang\BLL_DangNhap.cs" />
     <Compile Include="ModuleOne\Hotgate\DangKyUser_BLL.cs" />
     <Compile Include="ModuleOne\Hotgate\Hotgate_BLL.cs" />
+    <Compile Include="ModulePhongKham\Admin\SoDoToChuc_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +66,10 @@
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{6351C011-139B-43E9-98B0-106B41BBBFDB}</Project>
       <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserAuthorizations\UserAuthorizations.csproj">
+      <Project>{7efa1920-473f-449f-97f9-71be34b37330}</Project>
+      <Name>UserAuthorizations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

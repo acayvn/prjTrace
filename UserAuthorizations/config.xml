@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base>
+  <AppRoot>
+    <value>1</value>
+  </AppRoot>
+  <AppLogin>
+    <uURL>
+      http://localhost:8082/DangNhap.aspx
+    </uURL>
+  </AppLogin>
+</base>

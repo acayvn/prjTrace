@@ -226,6 +226,10 @@
       <Project>{976B9CFA-BFC6-44E9-B932-006869308A59}</Project>
       <Name>ClassUserControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserAuthorizations\UserAuthorizations.csproj">
+      <Project>{7efa1920-473f-449f-97f9-71be34b37330}</Project>
+      <Name>UserAuthorizations</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPageHotgate.Master" />

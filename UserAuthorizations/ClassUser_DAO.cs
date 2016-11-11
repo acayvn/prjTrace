@@ -22,7 +22,7 @@ namespace UserAuthorizations
             lst.Add(new SqlParameter("@DiaChi", clsUser.Address));
             lst.Add(new SqlParameter("@NamSinh", clsUser.YeahOfBirth));
             lst.Add(new SqlParameter("@GioiTinh", clsUser.Sex));
-            int kq = Convert.ToInt32(SqlHelper.ExecuteScalar(strConn(), CommandType.StoredProcedure, "spUsers",
+            int kq = Convert.ToInt32(SqlHelper.ExecuteScalar(sConn, CommandType.StoredProcedure, "spUsers",
                 lst.ToArray()));
             return kq == 1 ? true : false;
         }
@@ -41,7 +41,7 @@ namespace UserAuthorizations
             lst.Add(new SqlParameter("@NamSinh", clsUser.YeahOfBirth));
             lst.Add(new SqlParameter("@GioiTinh", clsUser.Sex));
             lst.Add(new SqlParameter("@Id", clsUser.Id));
-            SqlHelper.ExecuteNonQuery(strConn(), CommandType.StoredProcedure, "spUsers",
+            SqlHelper.ExecuteNonQuery(sConn, CommandType.StoredProcedure, "spUsers",
                 lst.ToArray());
         }
         /// <summary>
@@ -50,7 +50,7 @@ namespace UserAuthorizations
         /// <param name="clsUser"></param>
         public void Xoa(ClassUser clsUser)
         {
-            SqlHelper.ExecuteNonQuery(strConn(), CommandType.StoredProcedure, "spUsers",
+            SqlHelper.ExecuteNonQuery(sConn, CommandType.StoredProcedure, "spUsers",
                 new SqlParameter("@Activity", "DeleteById"),
                 new SqlParameter("@IdUser", clsUser.Id));
         }

@@ -15,7 +15,7 @@ namespace QLPhongKham
         public string menuText = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            KiemTraSession();
+            //KiemTraSession();
             if (!IsPostBack)
             {
                 LoadMenuText();

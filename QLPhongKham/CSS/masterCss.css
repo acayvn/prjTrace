@@ -60,7 +60,7 @@ a {
 
 .divMaster {
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .divMenu {
@@ -70,4 +70,7 @@ a {
 
 .divInfo {
     float: right;
+}
+.contents {
+    padding-top: 20px;
 }

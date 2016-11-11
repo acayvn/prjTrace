@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Configuration;
 
 namespace UserAuthorizations
 {
-    class BaseDAO
+    public class BaseDAO
     {
-        public static string strConn()
+        public string sConn
         {
-            return @"Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=DB_User;Integrated Security=True";
+            get
+            { return System.Configuration.ConfigurationManager.ConnectionStrings["strConnUser"].ToString();
+            }
         }
     }
 }

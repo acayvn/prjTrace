@@ -8,11 +8,15 @@ using BLL;
 using ClassUserControl;
 using System.Security.Cryptography;
 using System.Text;
+using System.Configuration;
+
+using System.Web.Security;
 
 namespace WebForm
 {
     public partial class DangNhap : System.Web.UI.Page
     {
+        
         int idTree = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["ValueTreeModuleOne"].ToString());
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -47,10 +51,20 @@ namespace WebForm
                 case 1:
                     ClassUser clsUser = new ClassUser() { UserName = txtTenDangNhap.Text};
                     clsUser.ReadInfoUserByUserName(clsUser.UserName);
-                    SessionClass clsSession = new SessionClass(idTree);
-                    clsSession.IdUser = clsUser.IdUser;
-                    Session["ClassSession"] = clsSession;
-                    Response.Redirect("Hotgate.aspx");
+                    UserAuthorizations.ClassToken clsToken = new UserAuthorizations.ClassToken();
+                    clsToken.UserName = txtTenDangNhap.Text.Trim();
+                    clsToken.IdTree = Convert.ToInt32(ConfigurationManager.AppSettings["AppValue"].ToString());
+                    clsToken.CreateLoginToken(clsToken.IdTree, clsToken.UserName);
+                    Application["AppToken"] = clsToken;
+                    FormsAuthentication.RedirectFromLoginPage(clsToken.UserName, false);
+                    var ax = User.Identity.Name;
+                    
+                    Response.Redirect("Hotgate.aspx?Action=" + clsToken.CreateLoginToken(clsToken.IdTree, clsToken.UserName));
+
+                    //SessionClass clsSession = new SessionClass(idTree);
+                    //clsSession.IdUser = clsUser.IdUser;
+                    //Session["ClassSession"] = clsSession;
+                    //Response.Redirect("Hotgate.aspx");
                     break;
                 case 2:
                     ClassUser clsU = new ClassUser();
@@ -62,6 +76,11 @@ namespace WebForm
                     Clear();
                     break;
             }
+        }
+
+        void VerityToken()
+        {
+            
         }
     }
 }

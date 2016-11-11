@@ -8,6 +8,7 @@ using System.Data;
 using BLL;
 using ClassUserControl;
 
+
 namespace WebForm
 {
     public partial class MasterPageHotgate : System.Web.UI.MasterPage
@@ -50,6 +51,7 @@ namespace WebForm
         }
         void KiemTraSession()
         {
+            string _userName = Page.User.Identity.Name;
             if (Session["ClassSession"] == null)
             {
                 Response.Redirect("DangNhap.aspx");
@@ -72,6 +74,10 @@ namespace WebForm
             }
 
 
+        }
+        void KiemTraToken(string userName, int idTree)
+        {
+            string _userName = Page.User.Identity.Name;
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
